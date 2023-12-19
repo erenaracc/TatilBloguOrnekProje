@@ -1,0 +1,116 @@
+﻿@using TravelTripProje.Models.Sınıflar
+@model List<Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    
+    
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px">Tatil&Seyehat Bloğum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restaurantlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacak Şeyler </p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>İletişim</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:630px;height:300px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                <li><img src="@x.BlogImage" alt="" style="width:630px;height:350px;"></li>
+                                @*<li><img src="~/web/images/img2.jpg" alt=""></li>
+                                <li><img src="~/web/images/img3.jpg" alt=""></li>
+                                <li><img src="~/web/images/img4.jpg" alt=""></li>*@
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyehat Bloğuma Hoşgeldiniz!</h3>
+                    <p>
+                        Hoş Geldiniz Gezgin Dostlar! 🌍✈️
+
+                        Merhaba! Ben [Gezginin Adı], bu dünya üzerindeki eşsiz güzellikleri ve kültürleri keşfetmeye adanmış bir gezginim. Sizleri, hayatımdaki maceraları, unutulmaz anları ve keşfettiğim yeni yerleri paylaşmak için bu blog sayfasına davet ediyorum.
+
+                        Bu platformda, dünyanın dört bir yanındaki gizli cennetlere ve kültürlere dair ilham verici hikayeler bulacaksınız. Seyahat etmeyi, farklı lezzetleri tatmayı, yerel insanlarla tanışmayı ve doğanın bize sunduğu muhteşem manzaraların tadını çıkarmayı seviyorum. Umuyorum ki, bu sayfa sizi de yeni yerlere, farklı lezzetlere ve renkli kültürlere taşıyacak bir kaynak olur.
+
+                        Seyahat etmek sadece yeni yerleri görmek değil, aynı zamanda kendimizi keşfetme ve dünyaya farklı bir perspektiften bakma fırsatıdır. Bu blog sayfasında, benimle birlikte bu heyecan verici yolculuğa çıkacak, farklı kültürleri keşfedecek ve dünya üzerindeki çeşitliliği kutlayacaksınız.
+                    </p>
+                </div>
+                    @Html.Action("Partial1","Default")
+
+                        <div class="grids">
+                            <div class="box1">
+                                @Html.Action("Partial3","Default")
+                                @Html.Action("Partial4","Default")
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
